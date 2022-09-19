@@ -38,7 +38,19 @@ ou supprimer ce fichier.
 ![image](https://user-images.githubusercontent.com/77662970/191008031-d0f5bbda-2016-4ff7-b63a-88bbf305cf4e.png)
 
 
-11.![image](https://user-images.githubusercontent.com/77662970/191009040-63243d65-9142-4325-a308-000014f959bc.png)
+11.On obtien l’uid et le gid avec la commande 
 
-12 . ![image](https://user-images.githubusercontent.com/77662970/191009979-6982c6c8-a7ae-4f22-9635-c6ca9a995f82.png)
+![image](https://user-images.githubusercontent.com/77662970/191009040-63243d65-9142-4325-a308-000014f959bc.png)
+
+12. La commande qui permet de retrouver l’utilisateur dont l’uid est spécifique est 
+
+![image](https://user-images.githubusercontent.com/77662970/191009979-6982c6c8-a7ae-4f22-9635-c6ca9a995f82.png)
+
+13.  La commande pour retrouver l'id d'un groupe spécifique est 
+
+![image](https://user-images.githubusercontent.com/77662970/191012796-6d718b0a-6fbf-4f7b-a1df-699750803c1f.png)
+
+
+14. Le group dont le gid est 1002 est: 
+![image](https://user-images.githubusercontent.com/77662970/191013760-02898255-2e63-4e8c-9ec6-2c09533d7635.png)
 
