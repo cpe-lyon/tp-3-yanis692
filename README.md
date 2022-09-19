@@ -55,3 +55,22 @@ ou supprimer ce fichier.
 
 ![image](https://user-images.githubusercontent.com/77662970/191013760-02898255-2e63-4e8c-9ec6-2c09533d7635.png)
 
+
+15.L'utilisateur charlie supprimer du groupe infra : charlie n'aura plus l'accées au dossier infra.
+
+![image](https://user-images.githubusercontent.com/77662970/191017926-adc4b1c3-5c52-4e51-9554-481a8a0cba6d.png)
+
+16.
+![image](https://user-images.githubusercontent.com/77662970/191021099-2655812b-c6ef-4884-99db-1acca0bb237b.png)
+
+17. L'intérpréteur de rott est bash :
+![image](https://user-images.githubusercontent.com/77662970/191021657-3a60a6b9-bd69-4a9e-ba16-2213cc556531.png)
+
+18. Nobody compte existant : 
+
+![image](https://user-images.githubusercontent.com/77662970/191027677-ba5493ba-e182-420e-a6e3-b35c598ee882.png)
+
+L'utilisateur nobody permet de lancer des démons en tant que nobody, spécialement pour des serveurs, de façon à limiter les dommages qui pourrait être occasionnés par un utilisateur malicieux qui aurait réussi à prendre leur contrôle car celui-ci a aucun fichier n'appartient, qui n'est dans aucun groupe qui a des privilèges et dont les seules possibilités sont celles que tous les "autres utilisateurs" ont.
+
+
+
