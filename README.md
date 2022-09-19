@@ -86,3 +86,39 @@ Pour le fichier :
 
 ![image](https://user-images.githubusercontent.com/77662970/191080770-f04297f3-4449-437c-b2fb-1fa65fd45aad.png)
 
+2. On peut observer que sudo peut lire le fichier :
+
+![image](https://user-images.githubusercontent.com/77662970/191082004-27ae4e52-1262-4d31-a9d1-e2c213a472b8.png)
+
+
+3. Les droit sont correctement appliquer
+
+4. On ne peut pas éxecuter le fichier car nous avons pas les priviléges nécessaire par rapport a root qui peut lui éxecuter un fichier même ci celui-ci n'est pas éxecutable.
+
+![image](https://user-images.githubusercontent.com/77662970/191086447-af4ebdc8-f82b-45bb-aeb2-906f36e543fe.png)
+
+5. On peut observer que nous ne pouvons pas lire le dossier test mais on peut lire le 'fichier'
+
+
+![image](https://user-images.githubusercontent.com/77662970/191090028-f1a1d1ad-6d3a-4a40-af9a-5a58c5d5cf88.png)
+
+
+6. Je ne peut pas modifier le contenue du fichier 'nouveau' puisque j'en ai pas la permission 
+
+![image](https://user-images.githubusercontent.com/77662970/191093842-0c2efcba-05cc-4822-b23b-17414efcdbe8.png)
+
+Je peut supprimer le fichier 'nouveau' maême si les droits d'écriture on était retirer sur le fichier car j'ai toujours le droit d'écriture sur le dossier mere donc je peut supprimer le fichier.
+
+![image](https://user-images.githubusercontent.com/77662970/191094338-853ce950-4ac1-4616-a61a-821666e162f0.png)
+
+7. On peut comprendre que l'on peut éxecuter aucune commande sur le dossier test et son contenu si nous avons pas les droits d'éxecuter sur le dossir.
+
+![image](https://user-images.githubusercontent.com/77662970/191096327-87dd85d3-815e-4800-b134-07931cc634bb.png)
+
+
+8. 
+
+
+
+
+
