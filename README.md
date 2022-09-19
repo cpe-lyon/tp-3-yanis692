@@ -33,4 +33,12 @@ ou supprimer ce fichier.
 
 9. On ne peut pas avoir accées a la sessions car aucun mot de passe a été rentrer pour alice et donc sa session est inactif.
 
-10.
+10.Nous pouvons accéder a alice après avoir crée un mot de passe
+
+![image](https://user-images.githubusercontent.com/77662970/191008031-d0f5bbda-2016-4ff7-b63a-88bbf305cf4e.png)
+
+
+11.![image](https://user-images.githubusercontent.com/77662970/191009040-63243d65-9142-4325-a308-000014f959bc.png)
+
+12 . ![image](https://user-images.githubusercontent.com/77662970/191009979-6982c6c8-a7ae-4f22-9635-c6ca9a995f82.png)
+
