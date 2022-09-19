@@ -20,3 +20,17 @@ La commande getent group infra nous permet de nous afficher que le groupe infra 
 
 ![image](https://user-images.githubusercontent.com/77662970/190978491-98657183-c63c-497d-a8c2-49dac28a83c0.png)
 
+5. La commande chgrp dev /home/alice et /home/bob nous permet de faire le groupe dev de alice et bob le groupe propriétaire. La commande chgrp infra /home/charlie et /home/dave permet de faire le groupe infra le groupe propriétaire.
+
+6. Pour remplacer le groupe primaire il faut utiliser la commande sudo usermod -g infra dave/ infra charlie/ dev alice/ dev bob.
+
+7. On peut se rendre dans le répertoire home pour ensuite éxécuter la commande suivantes sudo mkdir dev infra.
+
+8. On fait sudo chmod +t infra/infra pour que seule seul le propriétaire d’un fichier ait le droit de renommer
+ou supprimer ce fichier.
+
+![image](https://user-images.githubusercontent.com/77662970/190992187-ca654cfe-dda0-4d57-9945-9915dffdff7f.png)
+
+9. On ne peut pas avoir accées a la sessions car aucun mot de passe a été rentrer pour alice et donc sa session est inactif.
+
+10.
