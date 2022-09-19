@@ -78,4 +78,11 @@ L'utilisateur nobody permet de lancer des démons en tant que nobody, spécialem
 
 ## Exercice 2. Gestion des permissions
 
+1. Les droit pour le dossier test sont :
+
+![image](https://user-images.githubusercontent.com/77662970/191080656-6f49cbbf-001c-4ff7-a545-9bde368dd5f7.png)
+
+Pour le fichier :
+
+![image](https://user-images.githubusercontent.com/77662970/191080770-f04297f3-4449-437c-b2fb-1fa65fd45aad.png)
 
