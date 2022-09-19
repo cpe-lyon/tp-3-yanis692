@@ -52,5 +52,6 @@ ou supprimer ce fichier.
 
 
 14. Le group dont le gid est 1002 est: 
+
 ![image](https://user-images.githubusercontent.com/77662970/191013760-02898255-2e63-4e8c-9ec6-2c09533d7635.png)
 
