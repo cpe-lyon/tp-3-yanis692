@@ -122,6 +122,12 @@ Je peut supprimer le fichier 'nouveau' maême si les droits d'écriture on étai
 ```
 chmod 740 fichier
 ```
+10.Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture, ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire.
+
+![image](https://user-images.githubusercontent.com/77662970/192113151-05ff51a3-87ea-452e-b5d1-8561c2b79fe4.png)
+
+
+![image](https://user-images.githubusercontent.com/77662970/192113117-c82871de-0481-45d8-aeb4-2fc00181d4ed.png)
 
 
 
