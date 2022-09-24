@@ -116,8 +116,12 @@ Je peut supprimer le fichier 'nouveau' maême si les droits d'écriture on étai
 ![image](https://user-images.githubusercontent.com/77662970/191096327-87dd85d3-815e-4800-b134-07931cc634bb.png)
 
 
-8. 
+8. Les droits d'un fichier sont separés de ceux d'un dossier c'est a dire que les droits d'xecution d'un dossier n'influent pas sur ceux des fichiers qu'ils contient.
 
+9. Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre personne de votre groupe puisse y accéder en lecture, mais pas en écriture.    
+```
+chmod 740 fichier
+```
 
 
 
