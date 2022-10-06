@@ -93,8 +93,7 @@ La commande sudo -k nous permet de forcer a oublier un mot de passe.
 
 # Exercice 2. Gestion des permissions
 
-## 1. Dans votre $HOME, créez un dossier test, et dans ce dossier un fichier fichier contenant quelques
-## lignes de texte. Quels sont les droits sur test et fichier ?
+## 1. Dans votre $HOME, créez un dossier test, et dans ce dossier un fichier fichier contenant quelques lignes de texte. Quels sont les droits sur test et fichier ?
 Les droit pour le dossier test sont :
 
 ![image](https://user-images.githubusercontent.com/77662970/191080656-6f49cbbf-001c-4ff7-a545-9bde368dd5f7.png)
@@ -103,29 +102,22 @@ Pour le fichier :
 
 ![image](https://user-images.githubusercontent.com/77662970/191080770-f04297f3-4449-437c-b2fb-1fa65fd45aad.png)
 
-## 2. Retirez tous les droits sur ce fichier (même pour vous), puis essayez de le modifier et de l’afficher en
-## tant que root. Conclusion ?
+## 2. Retirez tous les droits sur ce fichier (même pour vous), puis essayez de le modifier et de l’afficher en tant que root. Conclusion ?
 On peut observer que root a toujours les droits sur le fichier :
 
 ![image](https://user-images.githubusercontent.com/77662970/191082004-27ae4e52-1262-4d31-a9d1-e2c213a472b8.png)
 
-## 3. Redonnez vous les droits en écriture et exécution sur fichier puis exécutez la commande echo "echo
-## Hello" > fichier. On a vu lors des TP précédents que cette commande remplace le contenu d’un
-## fichier s’il existe déjà. Que peut-on dire au sujet des droits ?
+## 3. Redonnez vous les droits en écriture et exécution sur fichier puis exécutez la commande echo "echo Hello" > fichier. On a vu lors des TP précédents que cette commande remplace le contenu d’un fichier s’il existe déjà. Que peut-on dire au sujet des droits ?
 On peut modifier le fichier, le lire sans l'utilisateur root. 
 ## 4. Essayez d’exécuter le fichier. Est-ce que cela fonctionne ? Et avec sudo ? Expliquez
 Le fichier est éxécutable car nous avons les droit d'éxécution sur le fichier
 
-## 5. . Placez-vous dans le répertoire test, et retirez-vous le droit en lecture pour ce répertoire. Listez le
-## contenu du répertoire, puis exécutez ou affichez le contenu du fichier fichier. Qu’en déduisez-vous ?
-## Rétablissez le droit en lecture sur test.
+## 5. . Placez-vous dans le répertoire test, et retirez-vous le droit en lecture pour ce répertoire. Listez le contenu du répertoire, puis exécutez ou affichez le contenu du fichier fichier. Qu’en déduisez-vous ? Rétablissez le droit en lecture sur test.
 On peut observer que nous ne pouvons pas lire le dossier test mais on peut lire le 'fichier'
 
 ![image](https://user-images.githubusercontent.com/77662970/191090028-f1a1d1ad-6d3a-4a40-af9a-5a58c5d5cf88.png)
 
-## 6. Créez dans test un fichier nouveau ainsi qu’un répertoire sstest. Retirez au fichier nouveau et au
-## répertoire test le droit en écriture. Tentez de modifier le fichier nouveau. Rétablissez ensuite le droit
-## en écriture au répertoire test. Tentez de modifier le fichier nouveau, puis de le supprimer. Que pouvezvous déduire de ## toutes ces manipulations ?
+## 6. Créez dans test un fichier nouveau ainsi qu’un répertoire sstest. Retirez au fichier nouveau et au répertoire test le droit en écriture. Tentez de modifier le fichier nouveau. Rétablissez ensuite le droit en écriture au répertoire test. Tentez de modifier le fichier nouveau, puis de le supprimer. Que pouvezvous déduire de toutes ces manipulations ?
 Je ne peut pas modifier le contenue du fichier 'nouveau' puisque j'en ai pas la permission 
 
 ![image](https://user-images.githubusercontent.com/77662970/191093842-0c2efcba-05cc-4822-b23b-17414efcdbe8.png)
@@ -134,27 +126,18 @@ Je peut supprimer le fichier 'nouveau' maême si les droits d'écriture on étai
 
 ![image](https://user-images.githubusercontent.com/77662970/191094338-853ce950-4ac1-4616-a61a-821666e162f0.png)
 
-## 7. Positionnez vous dans votre répertoire personnel, puis retirez le droit en exécution du répertoire test.
-## Tentez de créer, supprimer, ou modifier un fichier dans le répertoire test, de vous y déplacer, d’en
-## lister le contenu, etc…Qu’en déduisez vous quant au sens du droit en exécution pour les répertoires ?
+## 7. Positionnez vous dans votre répertoire personnel, puis retirez le droit en exécution du répertoire test. Tentez de créer, supprimer, ou modifier un fichier dans le répertoire test, de vous y déplacer, d’en lister le contenu, etc…Qu’en déduisez vous quant au sens du droit en exécution pour les répertoires ?
 On peut comprendre que l'on peut éxecuter aucune commande sur le dossier test et son contenu si nous avons pas les droits d'éxecuter sur le dossir.
 
 ![image](https://user-images.githubusercontent.com/77662970/191096327-87dd85d3-815e-4800-b134-07931cc634bb.png)
 
-## 8. Rétablissez le droit en exécution du répertoire test. Positionnez vous dans ce répertoire et retirez lui
-## à nouveau le droit d’exécution. Essayez de créer, supprimer et modifier un fichier dans le répertoire
-## test, de vous déplacer dans ssrep, de lister son contenu. Qu’en concluez-vous quant à l’influence des
-## droits que l’on possède sur le répertoire courant ? Peut-on retourner dans le répertoire parent avec ”cd
-##..” ? Pouvez-vous donner une explication ?
+## 8. Rétablissez le droit en exécution du répertoire test. Positionnez vous dans ce répertoire et retirez lui à nouveau le droit d’exécution. Essayez de créer, supprimer et modifier un fichier dans le répertoire test, de vous déplacer dans ssrep, de lister son contenu. Qu’en concluez-vous quant à l’influence des droits que l’on possède sur le répertoire courant ? Peut-on retourner dans le répertoire parent avec ”cd..” ? Pouvez-vous donner une explication ?
 Les droits d'un fichier sont separés de ceux d'un dossier c'est a dire que les droits d'xecution d'un dossier n'influent pas sur ceux des fichiers qu'ils contient.
-## 9. Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants
-## pour qu’une autre personne de votre groupe puisse y accéder en lecture, mais pas en écriture
-## Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre ## personne de votre groupe puisse y accéder en lecture, mais pas en écriture.    
+## 9. Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre personne de votre groupe puisse y accéder en lecture, mais pas en écriture. Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre ## personne de votre groupe puisse y accéder en lecture, mais pas en écriture.    
 ```
 chmod 740 fichier
 ```
-## 10. Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture,
-## ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire
+## 10. Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture, ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire
 Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture, ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire.
 
 ![image](https://user-images.githubusercontent.com/77662970/192113151-05ff51a3-87ea-452e-b5d1-8561c2b79fe4.png)
