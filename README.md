@@ -13,9 +13,13 @@ tp-3-yanis692 created by GitHub Classroom
 ![image](https://user-images.githubusercontent.com/77662970/190977140-56ddd0e8-f81d-4595-965a-270b6cfcf60b.png)
 ## 4. Donnez deux moyens d’afficher les membres de infra
 La commande cat /etc/group nous permet de voir les groupes et leurs membres.
+
 ![image](https://user-images.githubusercontent.com/77662970/190978228-34520b39-6bf5-4425-a6db-297cb7840668.png)
+
 La commande getent group infra nous permet de nous afficher que le groupe infra et les membres.
+
 ![image](https://user-images.githubusercontent.com/77662970/190978491-98657183-c63c-497d-a8c2-49dac28a83c0.png)
+
 ## 5. Faites de dev le groupe propriétaire des répertoires /home/alice et /home/bob et de infra le groupe
 ## propriétaire de /home/charlie et /home/dave
 La commande chgrp dev /home/alice et /home/bob nous permet de faire le groupe dev de alice et bob le groupe propriétaire. La commande chgrp infra /home/charlie et /home/dave permet de faire le groupe infra le groupe propriétaire.
