@@ -87,8 +87,7 @@ Nobody compte existant :
 ![image](https://user-images.githubusercontent.com/77662970/191027677-ba5493ba-e182-420e-a6e3-b35c598ee882.png)
 
 L'utilisateur nobody permet de lancer des démons en tant que nobody, spécialement pour des serveurs, de façon à limiter les dommages qui pourrait être occasionnés par un utilisateur malicieux qui aurait réussi à prendre leur contrôle car celui-ci a aucun fichier n'appartient, qui n'est dans aucun groupe qui a des privilèges et dont les seules possibilités sont celles que tous les "autres utilisateurs" ont.
-## 19. Par défaut, combien de temps la commande sudo conserve-t-elle votre mot de passe en mémoire ?
-## Quelle commande permet de forcer sudo à oublier votre mot de passe ?
+## 19. Par défaut, combien de temps la commande sudo conserve-t-elle votre mot de passe en mémoire ? Quelle commande permet de forcer sudo à oublier votre mot de passe ?
 La commande sudo garde le mot de passe 15 minutes en mémoire. 
 La commande sudo -k nous permet de forcer a oublier un mot de passe.
 
