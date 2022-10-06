@@ -9,8 +9,8 @@ tp-3-yanis692 created by GitHub Classroom
 création de leur dossier personnel et avec bash pour shell
 ![image](https://user-images.githubusercontent.com/77662970/190975835-af5b72f7-af60-4127-88e5-e31f438974b0.png)
 ## 3. Ajoutez les utilisateurs dans les groupes créés :
-- alice, bob, dave dans dev
-- bob, charlie, dave dans infra
+## - alice, bob, dave dans dev
+## - bob, charlie, dave dans infra
 ![image](https://user-images.githubusercontent.com/77662970/190977140-56ddd0e8-f81d-4595-965a-270b6cfcf60b.png)
 ## 4. Donnez deux moyens d’afficher les membres de infra
 La commande cat /etc/group nous permet de voir les groupes et leurs membres.
@@ -18,17 +18,17 @@ La commande cat /etc/group nous permet de voir les groupes et leurs membres.
 La commande getent group infra nous permet de nous afficher que le groupe infra et les membres.
 ![image](https://user-images.githubusercontent.com/77662970/190978491-98657183-c63c-497d-a8c2-49dac28a83c0.png)
 ## 5. Faites de dev le groupe propriétaire des répertoires /home/alice et /home/bob et de infra le groupe
-propriétaire de /home/charlie et /home/dave
+## propriétaire de /home/charlie et /home/dave
 La commande chgrp dev /home/alice et /home/bob nous permet de faire le groupe dev de alice et bob le groupe propriétaire. La commande chgrp infra /home/charlie et /home/dave permet de faire le groupe infra le groupe propriétaire.
 ## 6. Remplacez le groupe primaire des utilisateurs :
-- dev pour alice et bob
-- infra pour charlie et dave
+## - dev pour alice et bob
+## - infra pour charlie et dave
 Pour remplacer le groupe primaire il faut utiliser la commande sudo usermod -g infra dave/ infra charlie/ dev alice/ dev bob.
 ## 7. Créez deux répertoires /home/dev et /home/infra pour le contenu commun aux membres de chaque
-groupe, et mettez en place les permissions leur permettant d’écrire dans ces dossiers.
-On peut se rendre dans le répertoire home pour ensuite éxécuter la commande suivantes sudo mkdir dev infra.
+## groupe, et mettez en place les permissions leur permettant d’écrire dans ces dossiers.
+On peut se rendre dans le répertoire home pour ensuite éxécuter la commande suivantes ```sudo mkdir dev``` et ```sudo mkdir infra```.
 ## 8. Comment faire pour que, dans ces dossiers, seul le propriétaire d’un fichier ait le droit de renommer
-ou supprimer ce fichier ?
+## ou supprimer ce fichier ?
 On fait sudo chmod +t infra/infra pour que seule seul le propriétaire d’un fichier ait le droit de renommer
 ou supprimer ce fichier.
 ![image](https://user-images.githubusercontent.com/77662970/190992187-ca654cfe-dda0-4d57-9945-9915dffdff7f.png)
@@ -54,30 +54,31 @@ Le group dont le gid est 1002 est:
 L'utilisateur charlie supprimer du groupe infra : charlie n'aura plus l'accées au dossier infra.
 ![image](https://user-images.githubusercontent.com/77662970/191017926-adc4b1c3-5c52-4e51-9554-481a8a0cba6d.png)
 ## 16. Modifiez le compte de dave de sorte que :
-— il expire au 1
-er juin 2021
-— il faut changer de mot de passe avant 90 jours
-— il faut attendre 5 jours pour modifier un mot de passe
-— l’utilisateur est averti 14 jours avant l’expiration de son mot de passe
-— le compte sera bloqué 30 jours après expiration du mot de passe
+## — il expire au 1er juin 2021
+## — il faut changer de mot de passe avant 90 jours
+## — il faut attendre 5 jours pour modifier un mot de passe
+## — l’utilisateur est averti 14 jours avant l’expiration de son mot de passe
+## — le compte sera bloqué 30 jours après expiration du mot de passe
 
 ![image](https://user-images.githubusercontent.com/77662970/191021099-2655812b-c6ef-4884-99db-1acca0bb237b.png)
 
 ## 17. Quel est l’interpréteur de commandes (Shell) de l’utilisateur root ?
-L'intérpréteur de rott est bash :
+L'intérpréteur de root est bash :
 ![image](https://user-images.githubusercontent.com/77662970/191021657-3a60a6b9-bd69-4a9e-ba16-2213cc556531.png)
 ## 18. Si vous regardez la liste des comptes présents sur la machine, vous verrez qu’il en existe un nommé
-nobody. A quoi correspond-il ?
+## nobody. A quoi correspond-il ?
 Nobody compte existant : 
 ![image](https://user-images.githubusercontent.com/77662970/191027677-ba5493ba-e182-420e-a6e3-b35c598ee882.png)
 L'utilisateur nobody permet de lancer des démons en tant que nobody, spécialement pour des serveurs, de façon à limiter les dommages qui pourrait être occasionnés par un utilisateur malicieux qui aurait réussi à prendre leur contrôle car celui-ci a aucun fichier n'appartient, qui n'est dans aucun groupe qui a des privilèges et dont les seules possibilités sont celles que tous les "autres utilisateurs" ont.
 ## 19. Par défaut, combien de temps la commande sudo conserve-t-elle votre mot de passe en mémoire ?
-Quelle commande permet de forcer sudo à oublier votre mot de passe ?La commande sudo garde le mot de passe 15 minutes en mémoire. La commande sudo -k nous permet de forcer a oublier un mot de passe.
+## Quelle commande permet de forcer sudo à oublier votre mot de passe ?
+La commande sudo garde le mot de passe 15 minutes en mémoire. 
+La commande sudo -k nous permet de forcer a oublier un mot de passe.
 
 # Exercice 2. Gestion des permissions
 
 ## 1. Dans votre $HOME, créez un dossier test, et dans ce dossier un fichier fichier contenant quelques
-lignes de texte. Quels sont les droits sur test et fichier ?
+## lignes de texte. Quels sont les droits sur test et fichier ?
 Les droit pour le dossier test sont :
 
 ![image](https://user-images.githubusercontent.com/77662970/191080656-6f49cbbf-001c-4ff7-a545-9bde368dd5f7.png)
@@ -86,7 +87,7 @@ Pour le fichier :
 
 ![image](https://user-images.githubusercontent.com/77662970/191080770-f04297f3-4449-437c-b2fb-1fa65fd45aad.png)
 ## 2. Retirez tous les droits sur ce fichier (même pour vous), puis essayez de le modifier et de l’afficher en
-tant que root. Conclusion ?
+## tant que root. Conclusion ?
 On peut observer que root a toujours les droits sur le fichier :
 ![image](https://user-images.githubusercontent.com/77662970/191082004-27ae4e52-1262-4d31-a9d1-e2c213a472b8.png)
 ## 3. Redonnez vous les droits en écriture et exécution sur fichier puis exécutez la commande echo "echo
