@@ -6,7 +6,7 @@ tp-3-yanis692 created by GitHub Classroom
 ## 1. Utilisez la commande groupadd pour créer deux groupes dev et infra
 ![image](https://user-images.githubusercontent.com/77662970/190976354-cfa0ac38-d0ac-452d-a35b-80e9521437a8.png)
 ## 2. Créez ensuite 4 utilisateurs alice, bob, charlie, dave avec la commande useradd, en demandant la
-création de leur dossier personnel et avec bash pour shell
+## création de leur dossier personnel et avec bash pour shell
 ![image](https://user-images.githubusercontent.com/77662970/190975835-af5b72f7-af60-4127-88e5-e31f438974b0.png)
 ## 3. Ajoutez les utilisateurs dans les groupes créés :
 ## - alice, bob, dave dans dev
