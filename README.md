@@ -81,8 +81,7 @@ L'intérpréteur de root est bash :
 
 ![image](https://user-images.githubusercontent.com/77662970/191021657-3a60a6b9-bd69-4a9e-ba16-2213cc556531.png)
 
-## 18. Si vous regardez la liste des comptes présents sur la machine, vous verrez qu’il en existe un nommé
-## nobody. A quoi correspond-il ?
+## 18. Si vous regardez la liste des comptes présents sur la machine, vous verrez qu’il en existe un nommé nobody. A quoi correspond-il ?
 Nobody compte existant : 
 
 ![image](https://user-images.githubusercontent.com/77662970/191027677-ba5493ba-e182-420e-a6e3-b35c598ee882.png)
