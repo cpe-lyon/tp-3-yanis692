@@ -90,21 +90,23 @@ tant que root. Conclusion ?
 On peut observer que root a toujours les droits sur le fichier :
 ![image](https://user-images.githubusercontent.com/77662970/191082004-27ae4e52-1262-4d31-a9d1-e2c213a472b8.png)
 ## 3. Redonnez vous les droits en écriture et exécution sur fichier puis exécutez la commande echo "echo
-Hello" > fichier. On a vu lors des TP précédents que cette commande remplace le contenu d’un
-fichier s’il existe déjà. Que peut-on dire au sujet des droits ?
+## Hello" > fichier. On a vu lors des TP précédents que cette commande remplace le contenu d’un
+## fichier s’il existe déjà. Que peut-on dire au sujet des droits ?
 On peut modifier le fichier, le lire sans l'utilisateur root. 
 ## 4. Essayez d’exécuter le fichier. Est-ce que cela fonctionne ? Et avec sudo ? Expliquez
 Le fichier est éxécutable car nous avons les droit d'éxécution sur le fichier
 
-![image](https://user-images.githubusercontent.com/77662970/191086447-af4ebdc8-f82b-45bb-aeb2-906f36e543fe.png)
-
-5. On peut observer que nous ne pouvons pas lire le dossier test mais on peut lire le 'fichier'
-
+## 5. . Placez-vous dans le répertoire test, et retirez-vous le droit en lecture pour ce répertoire. Listez le
+## contenu du répertoire, puis exécutez ou affichez le contenu du fichier fichier. Qu’en déduisez-vous ?
+## Rétablissez le droit en lecture sur test.
+On peut observer que nous ne pouvons pas lire le dossier test mais on peut lire le 'fichier'
 
 ![image](https://user-images.githubusercontent.com/77662970/191090028-f1a1d1ad-6d3a-4a40-af9a-5a58c5d5cf88.png)
 
-
-6. Je ne peut pas modifier le contenue du fichier 'nouveau' puisque j'en ai pas la permission 
+## 6. Créez dans test un fichier nouveau ainsi qu’un répertoire sstest. Retirez au fichier nouveau et au
+## répertoire test le droit en écriture. Tentez de modifier le fichier nouveau. Rétablissez ensuite le droit
+## en écriture au répertoire test. Tentez de modifier le fichier nouveau, puis de le supprimer. Que pouvezvous déduire de ## toutes ces manipulations ?
+Je ne peut pas modifier le contenue du fichier 'nouveau' puisque j'en ai pas la permission 
 
 ![image](https://user-images.githubusercontent.com/77662970/191093842-0c2efcba-05cc-4822-b23b-17414efcdbe8.png)
 
@@ -112,24 +114,52 @@ Je peut supprimer le fichier 'nouveau' maême si les droits d'écriture on étai
 
 ![image](https://user-images.githubusercontent.com/77662970/191094338-853ce950-4ac1-4616-a61a-821666e162f0.png)
 
-7. On peut comprendre que l'on peut éxecuter aucune commande sur le dossier test et son contenu si nous avons pas les droits d'éxecuter sur le dossir.
-
+## 7. Positionnez vous dans votre répertoire personnel, puis retirez le droit en exécution du répertoire test.
+## Tentez de créer, supprimer, ou modifier un fichier dans le répertoire test, de vous y déplacer, d’en
+## lister le contenu, etc…Qu’en déduisez vous quant au sens du droit en exécution pour les répertoires ?
+On peut comprendre que l'on peut éxecuter aucune commande sur le dossier test et son contenu si nous avons pas les droits d'éxecuter sur le dossir.
 ![image](https://user-images.githubusercontent.com/77662970/191096327-87dd85d3-815e-4800-b134-07931cc634bb.png)
-
-
-8. Les droits d'un fichier sont separés de ceux d'un dossier c'est a dire que les droits d'xecution d'un dossier n'influent pas sur ceux des fichiers qu'ils contient.
-
-9. Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre personne de votre groupe puisse y accéder en lecture, mais pas en écriture.    
+## 8. Rétablissez le droit en exécution du répertoire test. Positionnez vous dans ce répertoire et retirez lui
+## à nouveau le droit d’exécution. Essayez de créer, supprimer et modifier un fichier dans le répertoire
+## test, de vous déplacer dans ssrep, de lister son contenu. Qu’en concluez-vous quant à l’influence des
+## droits que l’on possède sur le répertoire courant ? Peut-on retourner dans le répertoire parent avec ”cd
+##..” ? Pouvez-vous donner une explication ?
+Les droits d'un fichier sont separés de ceux d'un dossier c'est a dire que les droits d'xecution d'un dossier n'influent pas sur ceux des fichiers qu'ils contient.
+## 9. Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants
+## pour qu’une autre personne de votre groupe puisse y accéder en lecture, mais pas en écriture
+## Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre ## personne de votre groupe puisse y accéder en lecture, mais pas en écriture.    
 ```
 chmod 740 fichier
 ```
-10.Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture, ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire.
+## 10. Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture,
+## ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire
+Définissez un umask très restrictif qui interdit à quiconque à part vous l’accès en lecture ou en écriture, ainsi que la traversée de vos répertoires. Testez sur un nouveau fichier et un nouveau répertoire.
 
 ![image](https://user-images.githubusercontent.com/77662970/192113151-05ff51a3-87ea-452e-b5d1-8561c2b79fe4.png)
 
 
 ![image](https://user-images.githubusercontent.com/77662970/192113117-c82871de-0481-45d8-aeb4-2fc00181d4ed.png)
-
+## 11. Définissez un umask très permissif qui autorise tout le monde à lire vos fichiers et traverser vos répertoires, mais n’autorise que vous à écrire. Testez sur un nouveau fichier et un nouveau répertoire.
+```
+umask 022
+```
+![image](https://user-images.githubusercontent.com/77662970/194312153-f9c4aed2-bdbe-4672-b355-ecc72cf6d9f5.png)
+## 12. Définissez un umask équilibré qui vous autorise un accès complet et autorise un accès en lecture aux
+membres de votre groupe. Testez sur un nouveau fichier et un nouveau répertoire.
+```
+umask 047
+```
+![image](https://user-images.githubusercontent.com/77662970/194312366-2b18bc6c-e831-453e-83ad-cf7a4cdbcd43.png)
+## 13. Transcrivez les commandes suivantes de la notation classique à la notation octale ou vice-versa (vous
+pourrez vous aider de la commande stat pour valider vos réponses) :
+- chmod u=rx,g=wx,o=r fic = ```chmod 534```
+- chmod uo+w,g-rx fic en sachant que les droits initiaux de fic sont r--r-x--- = ```chmod 602 fic```
+- chmod 653 fic en sachant que les droits initiaux de fic sont 711 = ```rw-r-x-wx```
+- chmod u+x,g=w,o-r fic en sachant que les droits initiaux de fic sont r--r-x--- = ```chmod 520 fic```
+## 14. Affichez les droits sur le programme passwd. Que remarquez-vous ? En affichant les droits du fichier
+/etc/passwd, pouvez-vous justifier les permissions sur le programme passwd ?
+On peut remarquer que seul root peut éxécuter se fichier car se fichier contient dews information plus ou moins sensible sur les utilisateurs.
+![image](https://user-images.githubusercontent.com/77662970/194313514-537fd1f4-1c35-4593-8c3c-596964baaf0d.png)
 
 
 
