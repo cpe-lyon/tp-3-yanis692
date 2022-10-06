@@ -20,42 +20,53 @@ La commande getent group infra nous permet de nous afficher que le groupe infra 
 
 ![image](https://user-images.githubusercontent.com/77662970/190978491-98657183-c63c-497d-a8c2-49dac28a83c0.png)
 
-## 5. Faites de dev le groupe propriétaire des répertoires /home/alice et /home/bob et de infra le groupe
-## propriétaire de /home/charlie et /home/dave
+## 5. Faites de dev le groupe propriétaire des répertoires /home/alice et /home/bob et de infra le groupe propriétaire de /home/charlie et /home/dave
 La commande chgrp dev /home/alice et /home/bob nous permet de faire le groupe dev de alice et bob le groupe propriétaire. La commande chgrp infra /home/charlie et /home/dave permet de faire le groupe infra le groupe propriétaire.
 ## 6. Remplacez le groupe primaire des utilisateurs :
 ## - dev pour alice et bob
 ## - infra pour charlie et dave
 Pour remplacer le groupe primaire il faut utiliser la commande sudo usermod -g infra dave/ infra charlie/ dev alice/ dev bob.
-## 7. Créez deux répertoires /home/dev et /home/infra pour le contenu commun aux membres de chaque
-## groupe, et mettez en place les permissions leur permettant d’écrire dans ces dossiers.
+## 7. Créez deux répertoires /home/dev et /home/infra pour le contenu commun aux membres de chaque groupe, et mettez en place les permissions leur permettant d’écrire dans ces dossiers.
 On peut se rendre dans le répertoire home pour ensuite éxécuter la commande suivantes ```sudo mkdir dev``` et ```sudo mkdir infra```.
-## 8. Comment faire pour que, dans ces dossiers, seul le propriétaire d’un fichier ait le droit de renommer
-## ou supprimer ce fichier ?
+## 8. Comment faire pour que, dans ces dossiers, seul le propriétaire d’un fichier ait le droit de renommer ou supprimer ce fichier ?
 On fait sudo chmod +t infra/infra pour que seule seul le propriétaire d’un fichier ait le droit de renommer
 ou supprimer ce fichier.
+
 ![image](https://user-images.githubusercontent.com/77662970/190992187-ca654cfe-dda0-4d57-9945-9915dffdff7f.png)
+
 ## 9. Pouvez-vous ouvrir une session en tant que alice ? Pourquoi ?
 On ne peut pas avoir accées a la sessions car aucun mot de passe a été rentrer pour alice et donc sa session est inactif.
 ## 10. Activez le compte de l’utilisateur alice et vérifiez que vous pouvez désormais vous connecter avec son
 compte
 Nous pouvons accéder a alice après avoir crée un mot de passe
+
 ![image](https://user-images.githubusercontent.com/77662970/191008031-d0f5bbda-2016-4ff7-b63a-88bbf305cf4e.png)
+
 ## 11. Comment obtenir l’uid et le gid de alice ?
 On obtien l’uid et le gid avec la commande 
+
 ![image](https://user-images.githubusercontent.com/77662970/191009040-63243d65-9142-4325-a308-000014f959bc.png)
+
 ## 12. Quelle commande permet de retrouver l’utilisateur dont l’uid est 1003 ?
 La commande qui permet de retrouver l’utilisateur dont l’uid est spécifique est 
+
 ![image](https://user-images.githubusercontent.com/77662970/191009979-6982c6c8-a7ae-4f22-9635-c6ca9a995f82.png)
+
 ## 13. Quel est l’id du groupe dev ?
 La commande pour retrouver l'id d'un groupe spécifique est 
+
 ![image](https://user-images.githubusercontent.com/77662970/191012796-6d718b0a-6fbf-4f7b-a1df-699750803c1f.png)
+
 ## 14. Quel groupe a pour gid 1002 ? ( Rien n’empêche d’avoir un groupe dont le nom serait 1002...)
 Le group dont le gid est 1002 est: 
+
 ![image](https://user-images.githubusercontent.com/77662970/191013760-02898255-2e63-4e8c-9ec6-2c09533d7635.png)
+
 ## 15. Retirez l’utilisateur charlie du groupe infra. Que se passe-t-il ? Expliquez.
 L'utilisateur charlie supprimer du groupe infra : charlie n'aura plus l'accées au dossier infra.
+
 ![image](https://user-images.githubusercontent.com/77662970/191017926-adc4b1c3-5c52-4e51-9554-481a8a0cba6d.png)
+
 ## 16. Modifiez le compte de dave de sorte que :
 ## — il expire au 1er juin 2021
 ## — il faut changer de mot de passe avant 90 jours
@@ -67,11 +78,15 @@ L'utilisateur charlie supprimer du groupe infra : charlie n'aura plus l'accées 
 
 ## 17. Quel est l’interpréteur de commandes (Shell) de l’utilisateur root ?
 L'intérpréteur de root est bash :
+
 ![image](https://user-images.githubusercontent.com/77662970/191021657-3a60a6b9-bd69-4a9e-ba16-2213cc556531.png)
+
 ## 18. Si vous regardez la liste des comptes présents sur la machine, vous verrez qu’il en existe un nommé
 ## nobody. A quoi correspond-il ?
 Nobody compte existant : 
+
 ![image](https://user-images.githubusercontent.com/77662970/191027677-ba5493ba-e182-420e-a6e3-b35c598ee882.png)
+
 L'utilisateur nobody permet de lancer des démons en tant que nobody, spécialement pour des serveurs, de façon à limiter les dommages qui pourrait être occasionnés par un utilisateur malicieux qui aurait réussi à prendre leur contrôle car celui-ci a aucun fichier n'appartient, qui n'est dans aucun groupe qui a des privilèges et dont les seules possibilités sont celles que tous les "autres utilisateurs" ont.
 ## 19. Par défaut, combien de temps la commande sudo conserve-t-elle votre mot de passe en mémoire ?
 ## Quelle commande permet de forcer sudo à oublier votre mot de passe ?
@@ -89,10 +104,13 @@ Les droit pour le dossier test sont :
 Pour le fichier :
 
 ![image](https://user-images.githubusercontent.com/77662970/191080770-f04297f3-4449-437c-b2fb-1fa65fd45aad.png)
+
 ## 2. Retirez tous les droits sur ce fichier (même pour vous), puis essayez de le modifier et de l’afficher en
 ## tant que root. Conclusion ?
 On peut observer que root a toujours les droits sur le fichier :
+
 ![image](https://user-images.githubusercontent.com/77662970/191082004-27ae4e52-1262-4d31-a9d1-e2c213a472b8.png)
+
 ## 3. Redonnez vous les droits en écriture et exécution sur fichier puis exécutez la commande echo "echo
 ## Hello" > fichier. On a vu lors des TP précédents que cette commande remplace le contenu d’un
 ## fichier s’il existe déjà. Que peut-on dire au sujet des droits ?
@@ -122,7 +140,9 @@ Je peut supprimer le fichier 'nouveau' maême si les droits d'écriture on étai
 ## Tentez de créer, supprimer, ou modifier un fichier dans le répertoire test, de vous y déplacer, d’en
 ## lister le contenu, etc…Qu’en déduisez vous quant au sens du droit en exécution pour les répertoires ?
 On peut comprendre que l'on peut éxecuter aucune commande sur le dossier test et son contenu si nous avons pas les droits d'éxecuter sur le dossir.
+
 ![image](https://user-images.githubusercontent.com/77662970/191096327-87dd85d3-815e-4800-b134-07931cc634bb.png)
+
 ## 8. Rétablissez le droit en exécution du répertoire test. Positionnez vous dans ce répertoire et retirez lui
 ## à nouveau le droit d’exécution. Essayez de créer, supprimer et modifier un fichier dans le répertoire
 ## test, de vous déplacer dans ssrep, de lister son contenu. Qu’en concluez-vous quant à l’influence des
@@ -143,17 +163,20 @@ Définissez un umask très restrictif qui interdit à quiconque à part vous l�
 
 
 ![image](https://user-images.githubusercontent.com/77662970/192113117-c82871de-0481-45d8-aeb4-2fc00181d4ed.png)
+
 ## 11. Définissez un umask très permissif qui autorise tout le monde à lire vos fichiers et traverser vos répertoires, mais n’autorise que vous à écrire. Testez sur un nouveau fichier et un nouveau répertoire.
 ```
 umask 022
 ```
 ![image](https://user-images.githubusercontent.com/77662970/194312153-f9c4aed2-bdbe-4672-b355-ecc72cf6d9f5.png)
+
 ## 12. Définissez un umask équilibré qui vous autorise un accès complet et autorise un accès en lecture aux
 membres de votre groupe. Testez sur un nouveau fichier et un nouveau répertoire.
 ```
 umask 047
 ```
 ![image](https://user-images.githubusercontent.com/77662970/194312366-2b18bc6c-e831-453e-83ad-cf7a4cdbcd43.png)
+
 ## 13. Transcrivez les commandes suivantes de la notation classique à la notation octale ou vice-versa (vous
 pourrez vous aider de la commande stat pour valider vos réponses) :
 - chmod u=rx,g=wx,o=r fic = ```chmod 534```
@@ -163,7 +186,5 @@ pourrez vous aider de la commande stat pour valider vos réponses) :
 ## 14. Affichez les droits sur le programme passwd. Que remarquez-vous ? En affichant les droits du fichier
 /etc/passwd, pouvez-vous justifier les permissions sur le programme passwd ?
 On peut remarquer que seul root peut éxécuter se fichier car se fichier contient dews information plus ou moins sensible sur les utilisateurs.
+
 ![image](https://user-images.githubusercontent.com/77662970/194313514-537fd1f4-1c35-4593-8c3c-596964baaf0d.png)
-
-
-
