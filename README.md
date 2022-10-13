@@ -151,8 +151,7 @@ umask 022
 ```
 ![image](https://user-images.githubusercontent.com/77662970/194312153-f9c4aed2-bdbe-4672-b355-ecc72cf6d9f5.png)
 
-## 12. Définissez un umask équilibré qui vous autorise un accès complet et autorise un accès en lecture aux
-membres de votre groupe. Testez sur un nouveau fichier et un nouveau répertoire.
+## 12. Définissez un umask équilibré qui vous autorise un accès complet et autorise un accès en lecture aux membres de votre groupe. Testez sur un nouveau fichier et un nouveau répertoire.
 ```
 umask 047
 ```
